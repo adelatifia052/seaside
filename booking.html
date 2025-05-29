@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Seaside Resort</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+</head>
+<body> <!--Isi Utama Dalam halaman web -->
+
+  <!-- Header -->
+              <header>
+              <div class="header">
+                <div class="nav-container">
+                <img src="logo.png" class="logo" alt="Logo Hotel" />
+                  <div class="nav">
+                    <a href="Index.html">Home</a>
+                    <a href="rooms.html">Room & Suites</a>
+                    <a href="facility.html">Facility</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="booking.html">Booking</a>
+                    <!-- Ikon Notifikasi & Profil -->
+                    <a href="login.html"><i class="fas fa-user-circle"></i></a>
+                    <a href="notifikasi.html"><i class="fas fa-bell"></i></a>
+                  </div>
+
+              </div>
+          </div>
+
+  </header>
+            <!-- Booking Search Form -->
+          <section class="booking-search">
+            <div class="search-field">
+              <label>Room type</label>
+              <select>
+                <option>All Room Type</option>
+                <option>Deluxe Room</option>
+                <option>Superior Room</option>
+              </select>
+            </div>
+            <div class="search-field">
+              <label>Number of Room</label>
+              <input type="text" placeholder="000">
+            </div>
+            <div class="search-field">
+              <label>Check-In</label>
+              <input type="date">
+            </div>
+            <div class="search-field">
+              <label>Check-Out</label>
+              <input type="date">
+            </div>
+            <button class="btn-search">Search Now</button>
+          </section>
+
+          <!-- Booking Room Card -->
+          <section class="room-card">
+            <div class="room-box">
+              <div class="room-header">
+                <h3>Deluxe Room</h3>
+                <div class="room-labels">
+                  <span>Advantage</span>
+                  <span>Capacity</span>
+                  <span>No. of Room</span>
+                  <span>Price</span>
+                </div>
+              </div>
+
+              <div class="room-content">
+                <img src="room.jpg" alt="Room Image" class="room-img">
+
+                <div class="room-info">
+                  <div class="room-detail">
+                    <h4>Room Detail</h4>
+                    <p><i class="fa fa-wifi"></i> Free wifi</p>
+                    <p><i class="fa fa-bed"></i> 2 King Bed</p>
+                  </div>
+
+                  <div class="room-dates">
+                    <input type="date">
+                    <input type="date">
+                  </div>
+
+                  <div class="room-booking">
+                    <input type="text" placeholder="000">
+                    <p class="price">RP. 0.000.000 <span>/room/night</span></p>
+                    <button class="btn-book">Book Now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+  <!-- Footer pada bagian bawah-->
+  <footer class="footer">
+    <div class="footer-content">
+      <h2>SEASIDE</h2>
+
+   <!-- Footer tambahan berisi informasi tambahan-->    
+      <div class="footer-columns">
+        <div>
+          <h4>About</h4>
+          <a href="#">About Us</a>
+          <a href="#">Careers</a>
+          <a href="#">Contact Us</a>
+        </div>
+        <div>
+          <h4>Reservations</h4>
+          <a href="#">Request an invoice</a>
+          <a href="#">Find a reservation</a>
+          <a href="#">Email Preferences</a>
+        </div>
+        <div>
+          <h4>News</h4>
+          <a href="#">Press Room</a>
+          <a href="#">New Openings</a>
+          <a href="#">Magazine</a>
+          <a href="#">Newsletter</a>
+        </div>
+      </div>
+
+      <div class="socials">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/ltfiia_"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+      <div class="legal">
+        <a href="#">Legal Notice</a> | 
+        <a href="#">Privacy Policy</a> | 
+        <a href="#">Cookie Preferences</a> | 
+        <a href="#">Cookie Accessibility Policy</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
+

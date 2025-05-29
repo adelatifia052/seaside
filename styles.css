@@ -1,0 +1,543 @@
+/* Mengatur properti dasar untuk seluruh halaman */
+body:not(.login-page) {
+  margin: 0; /* Menghilangkan margin bawaan browser */
+  font-family: 'Open Sans', sans-serif; /* Menentukan jenis huruf yang digunakan */
+  color: #fff; /* Warna teks default jadi putih */
+  
+  /* Menambahkan gambar sebagai latar belakang halaman */
+  background-image: url(baghotell.jpg); /* Lokasi file gambar background */
+  background-size: cover; /* Agar gambar menutupi seluruh area */
+  background-position: center; /* Posisikan gambar di tengah */
+  background-repeat: no-repeat; /* Gambar tidak diulang */
+  background-attachment: fixed; /* Gambar tetap di tempat saat scroll */
+}
+
+/* Efek gelap transparan di atas background */
+body:not(.login-page)::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Untuk baground agak Transparan hitam */
+  z-index: -1; /* Supaya ada di belakang konten utama */
+}
+
+/* Mengatur tampilan link agar tidak bergaris dan warnanya mengikuti elemen induk */
+a {
+  text-decoration: none; /* Menghilangkan garis bawah */
+  color: inherit; /* Mengikuti warna teks dari induknya */
+}
+
+/* Mengatur tampilan header bagian atas */
+.header {
+  background-color: #006d77; /* Warna latar belakang header */
+  padding: 10px 20px; /* Ruang dalam atas-bawah 10px, kanan-kiri 20px */
+  display: flex; /* Agar konten sejajar secara horizontal */
+  align-items: center; /* Posisikan item di tengah secara vertikal */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bayangan halus di bawah header */
+  height: 80px; /* Tinggi maksimum header */
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+/* Container navigasi dalam header */
+.nav-container {
+  display: flex; /* Tampilkan item secara horizontal */
+  align-items: center; /* Sejajarkan vertikal */
+  justify-content: space-between; /* Jarak antara logo dan menu ke tepi */
+  width: 100%; /* Lebar penuh */
+}
+
+/* Mengatur ukuran logo */
+.logo {
+  height: 240px; /* Tinggi maksimum logo */
+  width: auto; /* Otomatis menyesuaikan lebar sesuai proporsi */
+  margin-left: 20px; /* Jarak kiri dari tepi */
+}
+
+/* Gaya untuk setiap link navigasi */
+.nav a {
+  margin-left: 20px; /* Jarak antar menu */
+  color: white; /* Warna teks putih */
+  font-weight: 500; /* Ketebalan huruf */
+  font-size: 16px; /* Ukuran font */
+}
+
+/* Overlay yang ada di tengah halaman (tempat tulisan welcome) */
+.hero-overlay {
+  background-color: transparent; /* Dibuat transparan supaya background gambar terlihat */
+  padding: 60px 30px; /* Ruang dalam: atas-bawah 60px, kanan-kiri 30px */
+  text-align: center; /* Teks di tengah */
+}
+
+/* Judul kecil di hero section */
+.hero-overlay h3 {
+  font-size: 24px; /* Ukuran huruf */
+  margin-bottom: 10px; /* Jarak bawah antar elemen */
+}
+
+/* Judul besar di hero section */
+.hero-overlay h1 {
+  font-size: 40px; /* Ukuran huruf besar */
+  font-weight: bold; /* Huruf tebal */
+}
+
+/* Gaya untuk tombol utama */
+.btn {
+  margin: 20px 0; /* Jarak atas dan bawah */
+  background-color: #006d77; /* Warna latar tombol */
+  color: white; /* Warna teks */
+  border: none; /* Tidak ada garis tepi */
+  padding: 10px 25px; /* Ukuran tombol */
+  font-size: 16px; /* Ukuran teks tombol */
+  cursor: pointer; /* Kursor berubah saat diarahkan */
+  border-radius: 4px; /* Sudut membulat */
+}
+
+/* Label untuk bagian fasilitas */
+.facilities-label {
+  margin-top: 20px; /* Jarak dari elemen atasnya */
+  font-weight: bold; /* Huruf tebal */
+  font-size: 28px; /* Tambahkan ini untuk membesarkan teks */
+  text-align: center; /* (opsional) agar teks rata tengah */
+}
+
+/* Container fasilitas */
+.facilities {
+  display: flex; /* Tampilkan item secara horizontal */
+  justify-content: center; /* Pusatkan isi */
+  flex-wrap: wrap; /* Boleh pindah ke baris baru kalau penuh */
+  margin-top: 20px; /* Jarak dari atas */
+  gap: 20px; /* Jarak antar fasilitas */
+}
+
+/* Satu kotak fasilitas */
+.facility {
+  text-align: center; /* Teks di tengah */
+  margin: 10px;
+}
+
+/* Gambar fasilitas (MENU OUR FACILITIES*/
+.facility img {
+  width: 270px; /* Lebar gambar */
+  height: 160px; /* Tinggi gambar */
+  object-fit: cover; /* Gambar tetap proporsional, tapi penuh */
+  border-radius: 12px; /* Sudut membulat */
+}
+
+/* Nama fasilitas */
+.facility p {
+  margin-top: 8px; /* Jarak dari gambar */
+  font-size: 25px;
+  font-weight: 500;
+}
+
+/* Bagian footer */
+.footer {
+  background-color: #12636b; /* Warna latar belakang */
+  padding: 5px 0px; /* Ruang dalam */
+  color: white; /* Warna teks */
+  margin-top: 8px; /* Jarak dari gambar */
+  font-size: 25px;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3); /* Bayangan di atas footer */
+  
+}
+
+/* Konten utama di dalam footer */
+.footer-content {
+  max-width: 1000px; /* Maksimal lebar konten */
+  margin: auto; /* Tengah halaman */
+  width: 100%; /* Supaya tetap responsif */
+  text-align: center; /* Rata tengah */
+  padding: 0 20px;
+}
+
+/* Bagian kolom-kolom footer yang tulisan about, reservasion dan news*/
+.footer-columns {
+  display: flex;
+  justify-content: space-between; /* Biar jaraknya merata kiri-kanan */
+  flex-wrap: wrap;
+  margin-top: 20px;
+  text-align: left;
+  max-width: 1000px; /* Batasi lebar konten footer */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 40px; /* Jarak dari tepi kiri-kanan */
+}
+
+/* Setiap kolom di footer */
+.footer-columns div {
+  margin: 10px 10px; /* Jarak antar kolom */
+}
+
+/* Judul masing-masing kolom */
+.footer-columns h4 {
+  margin-bottom: 10px;
+}
+
+/* Link di footer */
+.footer-columns a {
+  display: block; /* Tampilkan sebagai blok, satu per baris */
+  margin: 5px 0;
+  font-size: 14px;
+  color: #e0f7fa; /* Warna link yang lebih terang */
+}
+
+/* Bagian sosial media */
+.socials {
+  margin-top: 20px;
+}
+
+/* Link icon sosial media */
+.socials a {
+  margin: 0 10px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Legal notice kecil di bawah footer */
+.legal {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #b2dfdb;
+}
+
+/* =================== */
+/* Room & Suites Style */
+/* =================== */
+
+.room-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 50px;
+  flex-wrap: wrap; /* Tambahan kalau di layar kecil biar responsif */
+}
+
+.room-card {
+  width: 250px;
+  background-color: #276d7b;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.room-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.room-info {
+  padding: 15px;
+}
+
+.room-info h3 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.room-info button {
+  background-color: white;
+  color: #276d7b;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.room-info button:hover {
+  background-color: #e0e0e0;
+}
+
+/* Form Booking */
+.booking-form {
+  background-color: #f7f7f7;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  border-radius: 8px;
+  margin: 40px 20px;
+  flex-wrap: wrap;
+}
+
+.booking-form select,
+.booking-form input {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.search-btn {
+  background-color: #f9a825;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Booking List */
+.booking-list {
+  margin: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.booking-card {
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  padding: 15px;
+  align-items: center;
+}
+
+.booking-card img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.room-info {
+  flex: 1;
+}
+
+.room-info h3 {
+  margin: 0;
+  color: #276d7b;
+}
+
+.room-info ul {
+  padding: 0;
+  list-style: none;
+}
+
+.room-info ul li {
+  font-size: 14px;
+  color: #555;
+}
+
+.booking-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.booking-details input {
+  padding: 6px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.price {
+  font-weight: bold;
+  color: orange;
+  margin-top: 10px;
+}
+
+.book-btn {
+  background-color: #276d7b;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* ================= */
+/* Login Page Style  */
+/* ================= */
+
+.login-page {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+/* Bagian kiri dengan gambar background */
+.login-left {
+  flex: 1;
+  background-image: url('login.jpg'); /* Ganti jika berbeda */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Bagian kanan untuk form login */
+.login-right {
+  flex: 1;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Kotak login */
+.login-box {
+  background-color: #276d7b;
+  padding: 40px 30px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.login-box h2 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.login-box p {
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+/* Input field */
+.login-box input[type="email"],
+.login-box input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 25px;
+  box-sizing: border-box; /* Ini penting biar padding gak nambahin lebar */
+  outline: none;
+  font-size: 14px;
+}
+
+/* Tombol Login */
+.login-box button {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 25px;
+  background-color: white;
+  color: #276d7b;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+  box-sizing: border-box; /* Ini penting biar padding gak nambahin lebar */
+  margin-top: 10px;
+}
+
+.login-box button:hover {
+  background-color: white;
+  color: #276d7b;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Link "Forgot Password" */
+.login-box a {
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 12px;
+  color: #e0f7fa;
+}
+
+
+/* ================= */
+/* Notifikasi Section */
+/* ================= */
+.notification-wrapper {
+  background: #f9f9f9;
+  padding: 50px 20px;
+  width: 100%;
+}
+
+.notification-page {
+  background: #f9f9f9;
+  padding: 50px 20px; 
+  max-width: 800px;
+  margin: 0 auto;
+
+}
+
+.notif-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #000;
+  text-align: left;
+}
+
+.notif-filter {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.notif-filter button {
+  padding: 10px 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-all {
+  background-color: #005469;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.btn-unread {
+  background-color: red;
+  color: #fff;
+}
+
+.btn-read {
+  background-color: #00d100;
+  color: #fff;
+}
+
+.notif-list {
+  background: #fff;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.notif-item {
+  padding: 15px;
+  border-bottom: 1px solid #000000; /* untuk warna tulisan*/
+}
+
+.notif-item:last-child {
+  border-bottom: none;
+}
+
+.notif-item.unread {
+  font-weight: bold;
+  background-color: #1267ad; /* untuk bagroung tulisan isi notifikasi*/
+}
+
+.notif-time {
+  font-size: 0.9rem;
+  color: #000000;
+}
